@@ -113,10 +113,11 @@ var countDownDate = new Date("Nov 14, 2020 08:01:00 UTC").getTime();
 var x = setInterval(function() {
 
   // Get today's date and time
+	var date = new Date();
   var now = new Date().getTime();
 
   // Find the distance between now and the count down date
-  var distance = countDownDate - now - (now.getTimezoneOffset() * 60 * 1000);
+  var distance = countDownDate - now - (date.getTimezoneOffset() * 60 * 1000);
 
   // Time calculations for days, hours, minutes and seconds
   var days = Math.floor(distance / (1000 * 60 * 60 * 24));
