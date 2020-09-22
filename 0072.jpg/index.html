@@ -34,6 +34,21 @@ left: 0;
  font-size: 4rem;
  text-align: center;
 }
+#links {
+ position: fixed;
+ z-index: 99999;
+ bottom: 0;
+ right: 0;
+ padding: 10px;
+ font-family: sans;
+ color: white;
+ background-color:black;
+ font-size: 12px;
+ text-align: center;
+}
+#links a {
+	color: white;
+}
 body {
     display: -ms-flexbox;
     display: flex;
@@ -50,6 +65,13 @@ body {
 		<div id="viewer">
 		</div>
 		<div id="timer"></div>
+		<div id="links">
+			<b><a class="nav-link" href="https://images.terrapixel.me/0072.jpg/stats.html">stats</a></b>
+			<a class="nav-link" href="https://terrapixel.me/">home</a>
+			<span>&nbsp;|&nbsp;</span>
+			<a class="nav-link" target="_blank" href="https://terrapixel.me/docs">docs</a>
+			<a class="nav-link" target="_blank" href="https://terrapixel.me/imprint.html">imprint</a>
+		</div>
 	<script src="/openseadragon/openseadragon.min.js"></script>
 	<script src="/openseadragon/openseadragon-bookmark-url.js"></script>
 	<script>

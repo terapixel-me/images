@@ -42,6 +42,9 @@
       iframe {
 float: left;
       }
+      .clear {
+        clear: both;
+      }
     </style>
     <!-- Custom styles for this template -->
     <link href="sticky-footer.css" rel="stylesheet">
@@ -52,8 +55,10 @@ float: left;
   <div class="container">
     <h1 class="mt-5">Unus Annus Moasic</h1>
     <p class="lead">Here are some nerd statistics for the picture.</p>
-    <iframe src="https://images.terrapixel.me/0072.jpg/index.html" height="320" width="49%%"></iframe>
+    <iframe src="https://images.terrapixel.me/0072.jpg/index.html" height="320" width="49%"></iframe>
     <img src="https://www.terrapixel.me/0072.jpg" width="49%"/>
+    <p class="clear"></p>
+    <p><b><a href="https://images.terrapixel.me/0072.jpg/index.html">back to image</a></b></p>
     <p></p>
     <table width="100%">
 	    <tr>
@@ -381,9 +386,14 @@ float: left;
 
 <footer class="footer mt-auto py-3">
   <div class="container">
-    <span class="text-muted">Place sticky footer content here.</span>
+    <span class="text-muted">
+      <nav class="nav nav-masthead justify-content-center">
+        <a class="nav-link" href="https://terrapixel.me/">home</a>
+        <a class="nav-link" href="/imprint.html">imprint</a>
+        <a class="nav-link" href="/dataprotection.html">privacy statement</a>
+      </nav>
+    </span>
   </div>
 </footer>
 </body>
 </html>
-
