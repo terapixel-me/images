@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+	<head prefix="og: http://ogp.me/ns#">
+		<title>terapixel.me - 0179_1.jpg (Unus Annus)</title>
+		<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+		<meta name="description" content="terapixel project - mosaic images">
+    <meta name="twitter:site" content="@bennet0496" />
+    <meta name="twitter:creator" content="@bennet0496" />
+    <meta property="og:title" content="terapixel.me - 0179_1.jpg (Unus Annus)" />
+    <meta property="og:description" content="Unus Annus Mosaic. 1.2 million frames combinded into one. Gone Nov. 15, 2020. Clock is ticking" />
+    <meta property="og:image" content="https://images.terapixel.me/0072-preview.jpg" />
+    <meta name="twitter:card" content="summary_large_image"></meta>
+    <meta property="og:url" content="https://images.terapixel.me/0179_1.jpg/" />
+    <meta name="author" content="Bennet Becker">
+
+<style>
+#viewer {
+width: 100%;
+height: 100%;
+position: fixed;
+top: 0;
+left: 0;
+}
+#timer {
+ position: fixed;
+ z-index: 99999;
+ bottom: 0;
+ left: 0;
+ height: 4rem;
+ padding: 10px;
+ font-family: sans;
+ color: white;
+ background-color:black;
+ font-size: 4rem;
+ text-align: center;
+}
+#links {
+ position: fixed;
+ z-index: 99999;
+ bottom: 0;
+ right: 0;
+ padding: 10px;
+ font-family: sans;
+ color: white;
+ background-color:black;
+ font-size: 12px;
+ text-align: center;
+}
+#links a {
+	color: white;
+}
+body {
+    display: -ms-flexbox;
+    display: flex;
+    color: #fff;
+    text-shadow: 0 0.05rem 0.1rem rgba(0, 0, 0, .5);
+    box-shadow: inset 0 0 5rem rgba(0, 0, 0, .5);
+    margin: 0;
+    height: 100%;
+    background-color: #333;
+}
+</style>
+	</head>
+	<body>
+		<div id="viewer">
+		</div>
+		<div id="timer"></div>
+		<div id="links">
+			<b><a class="nav-link" href="https://images.terapixel.me/0179_1.jpg/stats.html">stats</a></b>
+			<a class="nav-link" href="https://terapixel.me/">home</a>
+			<span>&nbsp;|&nbsp;</span>
+			<a class="nav-link" target="_blank" href="https://terapixel.me/docs">docs</a>
+			<a class="nav-link" target="_blank" href="https://terapixel.me/imprint.html">imprint</a>
+		</div>
+	<script src="/openseadragon/openseadragon.min.js"></script>
+	<script src="/openseadragon/openseadragon-bookmark-url.js"></script>
+	<script>
+		function initOSD(imageLoaderLimit = 0, minPixelRatio = 0.5) {
+			window.osd = OpenSeadragon({
+			    id:            "viewer",
+			    prefixUrl:     "/openseadragon-flat-toolbar-icons-master/images/",
+			    navigatorSizeRatio: 0.25,
+			    wrapHorizontal:     false,
+			    showNavigator:  true,
+					gestureSettingsMouse: {
+						clickToZoom: false,
+						dblClickToZoom: true
+					},
+					imageLoaderLimit: imageLoaderLimit,
+					minPixelRatio: minPixelRatio,
+			    tileSources:   {
+						height: 1080*1080,
+						width:  1080*1920,
+						tileWidth: 1920,
+						tileHeight: 1080,
+						maxLevel: 8,
+						minLevel: 0,
+						getTileUrl: function( level, x, y ){
+				    	return "https://tilecdn.terapixel.me/terrapixel/0179_1.jpg-dump.npy/" +
+					    		level + "/" + y + "/" + x + ".jpg";
+						}
+			    }
+			});
+			window.osd.bookmarkUrl();
+		}
+		if(typeof(navigator.connection) !== 'undefined' && (navigator.connection.type === "cellular" || navigator.connection.type === "wimax" || navigator.connection.saveData))
+		{
+			if(
+							confirm("ATTENTION: You are on mobile data or data saver mode. "+
+											"This page is going to load a lot of images, probably "+
+											"counting towards your data cap."+
+											"\n"+
+											"\n"+
+											"Press ok to load anyways or cancel to abort.")) {
+				initOSD(36,1.5);
+			}
+		}else if (navigator.userAgent.match(/iPhone|iPad|iPod/i) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1) ) {
+			if(
+							confirm("ATTENTION: This page is going to load a lot of images, probably "+
+											"counting towards your data cap, when on mobile data"+
+											"\n"+
+											"\n"+
+											"Press 'ok' to load anyways (e.g. you are on wifi) or 'cancel' to abort.")) {
+				initOSD(0,1.5);
+			}
+		} else {
+			initOSD(0,0.5);
+		}
+	</script>
+	<script>
+	function inIframe () {
+    try {
+        return window.self !== window.top;
+    } catch (e) {
+        return true;
+    }
+	}
+	if (inIframe()){
+		var el = document.getElementById("timer");
+		el.parentNode.removeChild(el);
+	}else{
+		// Set the date we're counting down to
+		var countDownDate = new Date("Nov 14, 2020 08:01:00 UTC").getTime();
+
+		// Update the count down every 1 second
+		var x = setInterval(function() {
+
+		  // Get today's date and time
+			var date = new Date();
+		  var now = new Date().getTime();
+
+		  // Find the distance between now and the count down date
+		  var distance = countDownDate - now - (date.getTimezoneOffset() * 60 * 1000);
+
+		  // Time calculations for days, hours, minutes and seconds
+		  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+		  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+		  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+		  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+		  // Output the result in an element with id="demo"
+		  document.getElementById("timer").innerHTML = days + "d " + hours + "h "
+		  + minutes + "m " + seconds + "s ";
+
+		  // If the count down is over, write some text
+		  if (distance < 0) {
+		    clearInterval(x);
+		    document.getElementById("timer").innerHTML = "EXPIRED";
+		  }
+		}, 1000);
+	}
+</script>
+	</body>
+</html>
